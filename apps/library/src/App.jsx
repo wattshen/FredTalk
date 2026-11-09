@@ -4,6 +4,7 @@ import { useCuration } from "./Curation.jsx";
 import { Typography } from "./FoundationPages.jsx";
 import { Library } from "./ReferenceLibrary.jsx";
 import { Guidelines } from "./Guidelines.jsx";
+import { Intake } from "./Intake.jsx";
 const validPages = new Set(groups.flatMap(g => g.items.map(x => x[0])));
 const initialPage = () => {
   const key = location.hash.slice(1);
@@ -59,7 +60,7 @@ export default function App() {
     return () => window.removeEventListener("hashchange", handler);
   }, []);
   useEffect(() => {
-    document.title = pages[page][1] + " · FredTalk 2.1";
+    document.title = pages[page][1] + " · FredTalk 2.5";
     window.scrollTo({ top: 0 });
   }, [page]);
   const navigate = (target, id = null) => {
@@ -97,7 +98,7 @@ export default function App() {
           }}
         >
           <span>
-            <strong>FredTalk 2.1</strong>
+            <strong>FredTalk 2.5</strong>
             <small>视觉参考库</small>
           </span>
         </a>
@@ -149,13 +150,14 @@ export default function App() {
           </div>
         </header>
         <main id="main-content" ref={main} tabIndex={-1}>
-          {error && page !== "library" && (
+          {error && !["library", "intake"].includes(page) && (
             <p className="connection-note" role="status">
               {error}
             </p>
           )}
           {page === "typography" && <Typography data={reviewedData} onReference={(id) => navigate("library", id)} />}
           {["principles", "surfaces", "layout"].includes(page) && <Guidelines page={page} />}
+          {page === "intake" && <Intake />}
           {page === "library" && (
             <Library
               curation={curation}

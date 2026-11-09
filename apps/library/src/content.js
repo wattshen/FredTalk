@@ -1,4 +1,8 @@
-export const groups = [{title: "", items: [["library", "视觉库"], ["typography", "字体与字阶"], ["principles", "设计规范"], ["surfaces", "色彩与材质"], ["layout", "布局与安全区"]]}];
+export const groups = [
+  {title: "", items: [["library", "视觉库"]]},
+  {title: "制作", items: [["intake", "制作录入"]]},
+  {title: "", items: [["typography", "字体与字阶"], ["principles", "设计规范"], ["surfaces", "色彩与材质"], ["layout", "布局与安全区"]]},
+];
 export const pages = {
   overview: [
     "FredTalk Design",
@@ -44,6 +48,11 @@ export const pages = {
     "视觉参考 / 主入口",
     "视觉库",
     "按当前要表达的内容选场景，点击画面播放，详情中查看源码。",
+  ],
+  intake: [
+    "制作录入",
+    "把项目和素材交给 FredTalk。",
+    "填写口播稿、最终录音和素材，生成可直接交给 Agent 的交接单。",
   ],
   development: [
     "开发使用",

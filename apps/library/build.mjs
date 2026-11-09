@@ -29,8 +29,9 @@ await build({
   legalComments: "linked",
   metafile: false,
 });
+const version = Date.now().toString(36);
 await fs.writeFile(
   path.join(outdir, "index.html"),
-  `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><title>FredTalk 2.0 · 视觉库</title><link rel="stylesheet" href="./assets/app.css"></head><body><div id="root"></div><script type="module" src="./assets/app.js"></script></body></html>`,
+  `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><title>FredTalk 2.5 · 视觉库</title><link rel="stylesheet" href="./assets/app.css?v=${version}"></head><body><div id="root"></div><script type="module" src="./assets/app.js?v=${version}"></script></body></html>`,
 );
 console.log("Built FredTalk Design System:", outdir);

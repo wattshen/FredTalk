@@ -319,11 +319,11 @@ export function Library({
   return (
     <>
       <Heading page="library" />
-      <section className="release-notice" aria-label="FredTalk 2.1 更新">
-        <strong>FredTalk 2.1 · 新增 20 个组件</strong>
-        <p>10 条章节动画，10 条内容进场与交接动画；按实际用途选用，新增组件标 NEW。</p>
-        <p>T20i、T20j 可用于开场；其余主要用于内容过渡。本批会员优先使用 14 天，预览公开。</p>
-        <a href="https://github.com/njrhts2kvv-star/FredTalk/releases/tag/v2.1.0">查看 2.1 更新与公开预览 ↗</a>
+      <section className="release-notice" aria-label="FredTalk 2.5 更新">
+        <strong>FredTalk 2.5 · 新增 64 条组件与成片场景</strong>
+        <p>47 条 112–125 期成片场景，8 条录屏与界面操作，9 条章节过渡；同步更新 32 条历史组件。</p>
+        <p>强化逐句规划、整期编排与录屏表达，新增好坏成对样例与整期简报。</p>
+        <a href="https://github.com/njrhts2kvv-star/FredTalk/releases/tag/v2.5.0">查看 2.5 更新说明 ↗</a>
       </section>
       <section className="scenario-picker" aria-label="按使用场景筛选">
         <div className="scenario-groups" role="group" aria-label="内容类型">
